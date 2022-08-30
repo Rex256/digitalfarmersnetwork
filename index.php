@@ -39,16 +39,6 @@ else if ($text == "2") {
     $response .= "4. Others";
 }
 
-//Business logic for the first level response option 3
-
-else if ($text == "3") {
-	$response = "CON Please Choose your distribution point \n";
-    $response .= "1. Arua \n";
-    $response .= "2. Kampala \n";
-    $response .= "3. Koboko \n";
-    $response .= "4. Others";
-}
-
 //Business logic for the first level response option 4
 else if ($text == "4") {
 	$response = "CON Please Select your preferred Language \n";
@@ -65,7 +55,6 @@ else if ($text == "5") {
 	$response = "CON Digital Farmer's Network is an application that enables farmers to sell their products easily without being manipulated by the local market";
 }
 
-
 //This is a second level response option 1*1
 elseif ($text == "1*1") {
 	$accountNumber = "ACC1001";
@@ -76,7 +65,7 @@ elseif ($text == "1*1") {
 
 //This is a second level response option 1*2 
 elseif ($text == "1*2") {
-	$balance = "Ugx 10,000"
+	$balance = "Ugx 10,000";
 
 	//This is a terminal request, note how we start with END
 	$response = "END Your balance is ".$balance;
@@ -103,7 +92,7 @@ elseif ($text == "2*1") {
 }
 
 //Business logic for Second level response for option 2*2
-elseif ($text == "2*2")
+elseif ($text == "2*2") {
     $response = "CON Please Select the Product you want to Buy \n";
     $response .= "1. Tomatoes \n";
     $response .= "2. Onions \n";
@@ -147,6 +136,69 @@ elseif ($text == "2*1*3") {
     $response .= "2. 1 kg @  Ugx 2,500";
 }
 elseif ($text == "2*1*4") {
+    $response = "CON Can you please specify what you want to Purchase \n";
+}
+
+//Business logic for Third level response from 2*2
+elseif ($text == "2*2*1") {
+    $response = "CON 3. QUANTITIES AND PRICES \n";
+    $response .= "1. 1 Box @ Ugx 80,000 \n";
+    $response .= "2. 1 kg @  Ugx 6,500";
+}
+
+elseif ($text == "2*2*2") {
+    $response = "CON 3. QUANTITIES AND PRICES \n";
+    $response .= "1. 1 Sack @ Ugx 95,000 \n";
+    $response .= "2. 1 kg @  Ugx 4,500";
+}
+elseif ($text == "2*2*3") {
+    $response = "CON 3. QUANTITIES AND PRICES \n";
+    $response .= "1. 1 sack @ Ugx 40,000 \n";
+    $response .= "2. 1 kg @  Ugx 2,500";
+}
+elseif ($text == "2*2*4") {
+    $response = "CON Can you please specify what you want to Purchase \n";
+}
+
+//Business logic for Third level response from 2*3
+elseif ($text == "2*3*1") {
+    $response = "CON 3. QUANTITIES AND PRICES \n";
+    $response .= "1. 1 Box @ Ugx 80,000 \n";
+    $response .= "2. 1 kg @  Ugx 6,500";
+}
+
+elseif ($text == "2*3*2") {
+    $response = "CON 3. QUANTITIES AND PRICES \n";
+    $response .= "1. 1 Sack @ Ugx 95,000 \n";
+    $response .= "2. 1 kg @  Ugx 4,500";
+}
+elseif ($text == "2*3*3") {
+    $response = "CON 3. QUANTITIES AND PRICES \n";
+    $response .= "1. 1 sack @ Ugx 40,000 \n";
+    $response .= "2. 1 kg @  Ugx 2,500";
+}
+elseif ($text == "2*3*4") {
+    $response = "CON Can you please specify what you want to Purchase \n";
+}
+
+//Business logic for Third level response from 2*4
+elseif ($text == "2*4*1") {
+    $response = "CON 3. QUANTITIES AND PRICES \n";
+    $response .= "1. 1 Box @ Ugx 80,000 \n";
+    $response .= "2. 1 kg @  Ugx 6,500";
+}
+
+elseif ($text == "2*4*2") {
+    $response = "CON 3. QUANTITIES AND PRICES \n";
+    $response .= "1. 1 Sack @ Ugx 95,000 \n";
+    $response .= "2. 1 kg @  Ugx 4,500";
+}
+elseif ($text == "2*4*3") {
+    $response = "CON 3. QUANTITIES AND PRICES \n";
+    $response .= "1. 1 sack @ Ugx 40,000 \n";
+    $response .= "2. 1 kg @  Ugx 2,500";
+}
+elseif ($text == "2*4*4") {
     $response = "CON Can you please specify what you want to Purchase \n";
 }
 
@@ -204,7 +256,7 @@ elseif ($text == "2*1*4*2") {
 
 //Business logic for fifth level response from option 2*1*1*1
 elseif ($text == "2*1*1*1*1") {
-    $response = "END Your transaction is being processed \n";
+    $response = "END Your transaction is being processed ";
 }
 
 elseif ($text == "2*1*1*1*2") {
@@ -220,7 +272,85 @@ elseif ($text == "2*1*2*1*2") {
     $response = "END Your transaction is being processed \n";
 }
 
+//Business logic for fifth level response from option 2*1*3
+elseif ($text == "2*1*3*1*1") {
+    $response = "END Your transaction is being processed \n";
+}
+
+elseif ($text == "2*1*3*1*2") {
+    $response = "END Your transaction is being processed \n";
+}
+
+//Business logic for fifth level response from option 2*1*4
+elseif ($text == "2*1*4*1*1") {
+    $response = "END Your transaction is being processed \n";
+}
+
+elseif ($text == "2*1*4*1*2") {
+    $response = "END Your transaction is being processed \n";
+}
+
+
+//SELL
+//Business logic for Second level response from option 3*1
+else if ($text == "3") {
+    $response = "CON Please Choose your distribution point \n";
+    $response .= "1. Arua \n";
+    $response .= "2. Kampala \n";
+    $response .= "3. Koboko \n";
+    $response .= "4. Others";
+}
+elseif ($text == "3*1") {
+    $response = "CON Please Select the Product you want to Sell \n";
+    $response .= "1. Tomatoes \n";
+    $response .= "2. Onions \n";
+    $response .= "3. Cabbages \n";
+    $response .= "4. Others \n";
+}
+elseif ($text == "3*1*1") {
+    $response = "CON 3. QUANTITIES AND PRICES \n";
+    $price1 = 80000;
+    $price2 = 6500;
+    $response .= "1. 1 Box @ Ugx ".$price1;
+    $response .= "2. 1 kg @ Ugx ".$price2;
+}
+elseif ($text == "3*1*1*1") {
+    $response = "END Your Product has been Updated successfully \n";
+}
+
+elseif ($text == "3*1*2") {
+    $response = "CON 3. QUANTITIES AND PRICES \n";
+    $price1 = 80000;
+    $price2 = 6500;
+    $response .= "1. 1 Box @ Ugx ".$price1;
+    $response .= "2. 1 kg @ Ugx ".$price2;
+}
+elseif ($text == "3*1*2*1") {
+    $response = "END Your Product has been Updated successfully \n";
+}
+
+elseif ($text == "3*1*3") {
+    $response = "CON 3. QUANTITIES AND PRICES \n";
+    $price1 = 80000;
+    $price2 = 6500;
+    $response .= "1. 1 Box @ Ugx ".$price1;
+    $response .= "2. 1 kg @ Ugx ".$price2;
+}
+elseif ($text == "3*1*3*1") {
+    $response = "END Your Product has been Updated successfully \n";
+}
+elseif ($text == "3*1*4") {
+    $response = "CON 3. QUANTITIES AND PRICES \n";
+    $price1 = 80000;
+    $price2 = 6500;
+    $response .= "1. 1 Box @ Ugx ".$price1;
+    $response .= "2. 1 kg @ Ugx ".$price2;
+}
+elseif ($text == "3*1*4*1") {
+    $response = "END Your Product has been Updated successfully \n";
+}
+
 //echo the response to the API. The response depends on the statement that is fulfilled in each instance.
 header('Content-type: text/plain');
 echo $response;
-?  >
+?>
